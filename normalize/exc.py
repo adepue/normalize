@@ -285,6 +285,12 @@ class ValueCoercionError(CoercionError):
     )
 
 
+class VisitorOptionsException(UsageException):
+    message = (
+        "pass options= or Visitor.Options constructor arguments; not both"
+    )
+
+
 class VisitorTooSimple(SubclassError):
     message = (
         "{visitor} mapped over a RecordList ({value_type_name}) with "
